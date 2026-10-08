@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=DM+Sans:wght@400;500&family=Libre+Caslon+Display&display=swap');
 
 :root {
-  --navy: #091b31;
   --gold: #ad9264;
   --line: #e6e9ec;
   --header-height: 104px;
@@ -18,7 +17,6 @@ html {
 
 body {
   margin: 0;
-  color: var(--navy);
   background: #fff;
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
@@ -183,7 +181,7 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
   color: #8d764c;
 }
 
-.contact-grid a:hover { color: var(--navy); }
+.contact-grid a:hover { color: #000; }
 
 footer {
   padding: 25px 6%;
