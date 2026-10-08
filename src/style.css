@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=DM+Sans:wght@400;500&family=Libre+Caslon+Display&display=swap');
+
+:root {
+  --navy: #091b31;
+  --gold: #ad9264;
+  --line: #e6e9ec;
+  --header-height: 104px;
+  --serif: 'Libre Caslon Display', Georgia, serif;
+  --sans: 'DM Sans', 'Noto Sans KR', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  color: var(--navy);
+  background: #fff;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+
+.skip {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 50;
+  padding: 15px;
+  background: #fff;
+}
+
+.skip:focus { top: 12px; }
+
+/* 헤더 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 5.4%;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.brand img {
+  flex-shrink: 0;
+  width: 286px;
+  max-width: none;
+  height: auto;
+  margin-left: -36px;
+}
+
+.contact-link {
+  padding: 14px 0;
+  border-bottom: 1px solid transparent;
+  color: #8d764c;
+  font-size: 16px;
+  letter-spacing: .07em;
+}
+
+.contact-link:hover { border-bottom-color: var(--gold); }
+
+/* 메인 영상: 하단을 기준으로 화면 채우기 */
+.hero {
+  position: relative;
+  isolation: isolate;
+  height: calc(100svh - var(--header-height));
+  min-height: 300px;
+  overflow: hidden;
+  background: #17314b;
+}
+
+.hero-photo,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-photo {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.hero-shade {
+  z-index: -1;
+  background: linear-gradient(90deg, #061d2f30, #061d2f08);
+  pointer-events: none;
+}
+
+/* 연락처: 동일한 너비의 2열과 중앙 구분선 */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - var(--header-height));
+  padding: 90px 8.4% 110px;
+  text-align: center;
+}
+
+.contact-brand {
+  margin: 0 0 18px;
+  color: #8d764c;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: .22em;
+}
+
+.contact h1 {
+  margin: 0;
+  font: 400 64px / 1.2 var(--serif);
+}
+
+.gold-line {
+  width: 45px;
+  height: 1px;
+  margin: 28px auto 58px;
+  background: var(--gold);
+}
+
+.contact-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+.contact-grid h2 {
+  margin: 0 0 22px;
+  font: 400 30px var(--serif);
+}
+
+.contact-grid p,
+.contact-grid address {
+  margin: 0;
+  color: #65717c;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.contact-grid a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #d9cbb4;
+  color: #8d764c;
+}
+
+.contact-grid a:hover { color: var(--navy); }
+
+footer {
+  padding: 25px 6%;
+  border-top: 1px solid #e9edef;
+  color: #79828a;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: .02em;
+  text-align: center;
+}
+
+/* 모바일 */
+@media (max-width: 650px) {
+  :root { --header-height: 80px; }
+  .header { padding: 0 6%; }
+  .brand { width: 180px; height: 80px; }
+  .brand img { width: 232px; margin-left: -30px; }
+  .contact-link { font-size: 14px; letter-spacing: .02em; }
+  .hero { min-height: 280px; }
+  .contact { padding: 65px 8%; }
+  .contact h1 { font-size: 48px; }
+  .gold-line { margin-bottom: 37px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .contact-grid::before { display: none; }
+  .contact-grid > div + div { padding-top: 28px; border-top: 1px solid var(--line); }
+  .contact-grid h2 { margin-bottom: 13px; font-size: 28px; }
+  footer { padding: 22px 6%; }
+}
+
+@media (max-width: 360px) {
+  .brand { width: 158px; }
+  .brand img { width: 215px; margin-left: -28px; }
+  .contact-link { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
