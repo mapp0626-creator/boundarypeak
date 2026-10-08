@@ -1,8 +1,8 @@
 {
-  "name": "yc-heritage",
+  "name": "boundary-peak",
   "version": "1.0.0",
   "private": true,
-  "description": "YC HERITAGE investment company contact website",
+  "description": "BOUNDARY PEAK capital managemant contact website",
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {

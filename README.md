@@ -1,4 +1,4 @@
-# YC HERITAGE
+# BOUNDARY PEAK
 
 흰색 헤더, 화면 높이를 채우는 풍경 사진, Contact Us 영역으로 구성한 단일 페이지 홈페이지입니다. 현재 Sites에 게시된 디자인과 이미지, 문구를 그대로 옮긴 독립 실행 프로젝트입니다.
 
@@ -52,7 +52,7 @@ package-lock.json
 
 ## 이미지와 글꼴
 
-- 로고: 사용자가 제공한 YC HERITAGE 로고. 별도 공개 이용 허락을 부여하지 않습니다.
+- 로고: 사용자가 제공한 BOUNDARY PEAK 로고. 별도 공개 이용 허락을 부여하지 않습니다.
 - 풍경 사진: Francesco Ungaro / [Unsplash](https://unsplash.com/es/fotos/fotografia-de-paisaje-de-montana-gris-y-verde-pWLwpVAYnB8), Unsplash License.
 - Noto Sans KR, DM Sans, Libre Caslon Display는 Google Fonts에서 로드합니다. 인터넷 연결이 없으면 시스템 대체 글꼴을 사용합니다. 로고·사진·소스는 모두 저장소에 포함됩니다.
 

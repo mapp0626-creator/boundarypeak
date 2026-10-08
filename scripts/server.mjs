@@ -34,5 +34,5 @@ const server = http.createServer(async (request, response) => {
   response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
   response.end('Not found');
 });
-server.listen(port, host, () => console.log(`YC HERITAGE: http://${host}:${port}`));
+server.listen(port, host, () => console.log(`BOUNDARY PEAK: http://${host}:${port}`));
 server.on('error', error => { console.error(error.message); process.exitCode = 1; });
