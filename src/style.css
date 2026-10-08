@@ -54,17 +54,18 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 .brand {
   display: flex;
   align-items: center;
-  width: 230px;
-  height: 90px;
+  width: 278.3px;
+  height: 110px;
   overflow: hidden;
+  transform: translateX(-6px);
 }
 
 .brand img {
   flex-shrink: 0;
-  width: 286px;
+  width: 346.5px;
   max-width: none;
   height: auto;
-  margin-left: -36px;
+  margin-left: -50.6px;
 }
 
 .contact-link {
